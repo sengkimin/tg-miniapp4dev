@@ -2,6 +2,7 @@ import { JSX } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import ProfilePage from "../pages/ProfilePage";
 import Layout from "../pages/Layout";
+import BranchesPage from "../pages/pageBranch";
 
 export interface AppRoute {
   path?: string;
@@ -12,6 +13,7 @@ export interface AppRoute {
 
 export const webRoutes = {
   home: "/",
+  branch :"/branch"
   // discover: "/discover",
 };
 
@@ -27,7 +29,7 @@ const appRoutes: AppRoute[] = [
     element: <Layout />,
     children: [
       { path: webRoutes.home, element: <ProfilePage /> },
-      // { path: webRoutes.discover, element: <DiscoverPage /> },
+      { path: webRoutes.branch, element: <BranchesPage /> },
     ],
   },
   {
