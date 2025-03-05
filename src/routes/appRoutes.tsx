@@ -7,6 +7,7 @@ import Detail from "../pages/DetailPromotion"
 
 import BranchesPage from "../pages/pageBranch";
 import MembershipPlan from "../pages/membershipPlan";
+import Coupons from "../pages/couPons";
 
 export interface AppRoute {
   path?: string;
@@ -17,9 +18,10 @@ export interface AppRoute {
 
 export const webRoutes = {
   home: "/",
+  branch :"/branch",
+  coupons : "/Coupon"
   promotion: "/promotion",
   gymPromotion: "/detail",
-  branch :"/branch"
   membership: "/membership"
   // discover: "/discover",
 };
@@ -39,9 +41,10 @@ const appRoutes: AppRoute[] = [
       { path: webRoutes.gymPromotion, element: <Detail /> },
       { path: webRoutes.home, element: <ProfilePage /> },
       { path: webRoutes.branch, element: <BranchesPage /> },
-
       { path: webRoutes.membership, element: <MembershipPlan /> },
       // { path: webRoutes.discover, element: <DiscoverPage /> },
+      { path: webRoutes.coupons, element: <Coupons /> },
+
     ],
   },
   {
